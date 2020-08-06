@@ -10,23 +10,21 @@ namespace Snake
     {
         List<Point> pList;
 
-        public HorisontalLine()
+        public HorisontalLine(int xLeft, int xReight, int y, char sym)
         {
             pList = new List<Point>();
-            Point p1 = new Point(4, 4, '*');
-            Point p2 = new Point(5, 4, '*');
-            Point p3 = new Point(6, 4, '*');
-            Point p4 = new Point(7, 4, '*');
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
-            pList.Add(p4);
+            for (int x = xLeft; x <= xReight; x++)
+            {
+                Point p = new Point( x, y, sym);
+                pList.Add(p);
+
+            }
         }
         public void Drow()
         {
             foreach(Point p in pList)
             {
-                Console.Write(p);
+                p.Draw();
             }
         }
 

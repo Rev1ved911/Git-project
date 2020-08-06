@@ -22,7 +22,8 @@ namespace Snake
             Point p4 = new Point(10, 9, '+');
             p4.Draw();
 
-
+            HorisontalLine line = new HorisontalLine(5, 10, 10, '+');
+            line.Drow();
 
 
 
